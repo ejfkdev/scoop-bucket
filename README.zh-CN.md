@@ -71,8 +71,9 @@ python3 update_manifests.py dj udf    # 只更新指定包
 python3 update_manifests.py --check   # 仅检查是否有新版本（有则退出码 1）
 ```
 
-[`.github/workflows/auto-update.yml`](.github/workflows/auto-update.yml) 每天自动
-执行、校验并合并。
+[`.github/workflows/auto-update.yml`](.github/workflows/auto-update.yml) 每天
+04:00 UTC 自动执行（也支持手动触发），校验后自动合并。若无法合并，会保留
+PR 并给出告警，而不是让整个任务失败。
 
 [`validate_manifests.py`](validate_manifests.py) 用于校验 JSON 合法性、Scoop 官方
 schema、哈希格式、`checkver`/`autoupdate` 的完整性，以及每个 `bin` 项是否对应

@@ -75,8 +75,10 @@ python3 update_manifests.py dj udf    # update named manifests
 python3 update_manifests.py --check   # report drift, change nothing (exit 1)
 ```
 
-[`.github/workflows/auto-update.yml`](.github/workflows/auto-update.yml) runs it
-daily, validates the result, and merges the change automatically.
+[`.github/workflows/auto-update.yml`](.github/workflows/auto-update.yml) runs
+daily at 04:00 UTC (and on manual dispatch), validates the result, and merges
+the change automatically. If the merge cannot be completed it leaves the pull
+request open with a warning instead of failing the run.
 
 [`validate_manifests.py`](validate_manifests.py) checks JSON validity, Scoop's
 published schema, hash formatting, the presence of `checkver`/`autoupdate`, that
