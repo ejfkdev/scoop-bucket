@@ -15,7 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install validation dependency
+        run: python3 -m pip install --quiet jsonschema
+
       - name: Update manifests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 update_manifests.py
 
       - name: Validate manifests
@@ -44,13 +49,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           for i in $(seq 1 12); do
-            if gh pr merge auto-update/manifests --squash --admin --delete-branch; then
-              echo "Merged"
+            if gh pr merge auto-update/manifests --squash --delete-branch 2>/dev/null; then
+              echo "Merged on attempt $i"
               exit 0
             fi
-            echo "Merge attempt $i failed, retrying in 5s..."
+            state=$(gh pr view auto-update/manifests --json mergeStateStatus -q .mergeStateStatus 2>/dev/null || echo UNKNOWN)
+            echo "Attempt $i failed (merge state: $state), retrying in 5s..."
             sleep 5
           done
-          echo "ERROR: failed to merge after 12 attempts" >&2
-          exit 1
+          echo "::warning::Could not auto-merge after 12 attempts; PR left open for manual merge."
+          exit 0

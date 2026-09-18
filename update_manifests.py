@@ -15,6 +15,8 @@ import os
 import subprocess
 import sys
 import hashlib
+import time
+import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -111,20 +113,63 @@ ASSETS = {
 PRE_INSTALL_RENAME = {"oss"}
 
 
+def _headers():
+    """Build request headers, authenticating when a token is available.
+
+    Unauthenticated GitHub API calls are capped at 60/hour, which a 16-tool
+    sweep can exhaust; CI supplies GITHUB_TOKEN, and a local run can export
+    GH_TOKEN (or rely on the ``gh`` CLI's stored token).
+    """
+    headers = {"User-Agent": "scoop-bucket-updater"}
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if not token:
+        try:
+            token = subprocess.run(
+                ["gh", "auth", "token"], capture_output=True, text=True, timeout=10
+            ).stdout.strip()
+        except Exception:
+            token = ""
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def _get(url, timeout):
+    """GET with a few retries on transient network/5xx failures."""
+    last = None
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, headers=_headers())
+            return urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as exc:
+            # 403/429 from rate limiting is worth a wait; other 4xx are fatal.
+            if exc.code in (403, 429) and attempt < 3:
+                wait = 15 * (attempt + 1)
+                print(f"    rate limited, retrying in {wait}s...")
+                time.sleep(wait)
+                last = exc
+                continue
+            raise
+        except Exception as exc:
+            if attempt == 3:
+                raise
+            last = exc
+            time.sleep(3 * (attempt + 1))
+    raise last
+
+
 def github_latest(repo):
     """Return (tag, version) for the upstream latest release."""
     url = f"https://api.github.com/repos/{repo}/releases/latest"
-    req = urllib.request.Request(url, headers={"User-Agent": "scoop-bucket-updater"})
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with _get(url, timeout=30) as r:
         data = json.load(r)
     tag = data["tag_name"]
     return tag, tag.lstrip("v")
 
 
 def sha256_of(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "scoop-bucket-updater"})
     h = hashlib.sha256()
-    with urllib.request.urlopen(req, timeout=300) as r:
+    with _get(url, timeout=300) as r:
         for chunk in iter(lambda: r.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
