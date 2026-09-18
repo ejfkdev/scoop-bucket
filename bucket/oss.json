@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.2.5",
+  "description": "S3-compatible cross-cloud object storage CLI - list, export and download buckets across AWS, Aliyun, Tencent, Huawei, Qiniu, Baidu, UCloud, JD Cloud and more",
+  "homepage": "https://github.com/ejfkdev/oss",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/oss/releases/download/v0.2.5/oss-v0.2.5-windows-amd64.zip",
+      "hash": "485904607e5516823bfad8e90ed70e3a9169a0f2f93c0ae5977b3a79f1165fa1"
+    }
+  },
+  "pre_install": [
+    "Remove-Item \"$dir\\README.md\", \"$dir\\LICENSE\" -ErrorAction SilentlyContinue",
+    "Get-ChildItem \"$dir\\oss-v*-windows-amd64.exe\" | Select-Object -First 1 | Rename-Item -NewName 'oss.exe'"
+  ],
+  "bin": "oss.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/oss"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/oss/releases/download/v$version/oss-v$version-windows-amd64.zip"
+      }
+    }
+  }
+}

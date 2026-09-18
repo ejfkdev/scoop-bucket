@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "1.0.0",
+  "description": "JavaScript deobfuscator (obfuscator.io + unminify)",
+  "homepage": "https://github.com/ejfkdev/jd",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/jd/releases/download/v1.0.0/jd-v1.0.0-windows-amd64.exe#/jd.exe",
+      "hash": "79a9fcb9aa1aceefdb17bd6cb91b3e2ffb06232ca7da4fcda443027161779f43"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/jd/releases/download/v1.0.0/jd-v1.0.0-windows-arm64.exe#/jd.exe",
+      "hash": "df0398a8d5736f768e9e4301f5c643c24a1cd06ec9e448c43615a5127ff14a31"
+    }
+  },
+  "bin": "jd.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/jd"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/jd/releases/download/v$version/jd-v$version-windows-amd64.exe#/jd.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/jd/releases/download/v$version/jd-v$version-windows-arm64.exe#/jd.exe"
+      }
+    }
+  }
+}

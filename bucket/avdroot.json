@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.1.1",
+  "description": "Root an Android Studio emulator by patching its ramdisk with Magisk",
+  "homepage": "https://github.com/ejfkdev/avdroot",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/avdroot/releases/download/v0.1.1/avdroot_windows_amd64.exe#/avdroot.exe",
+      "hash": "ca86de1fcb7151c6d9fc7c4aa074235178aa0d232b575846a9d5e932c205466f"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/avdroot/releases/download/v0.1.1/avdroot_windows_arm64.exe#/avdroot.exe",
+      "hash": "bd815824c22a42419551ac7bdea382cf16632bd84b87b546b9dddf42af530abe"
+    }
+  },
+  "bin": "avdroot.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/avdroot"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/avdroot/releases/download/v$version/avdroot_windows_amd64.exe#/avdroot.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/avdroot/releases/download/v$version/avdroot_windows_arm64.exe#/avdroot.exe"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.5.6",
+  "description": "TypeSpec compiler CLI, a Rust implementation of the TypeSpec type system (parser, type checker, emitter)",
+  "homepage": "https://github.com/ejfkdev/typespec-rs",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.6/tspc-x86_64-pc-windows-msvc.exe#/tspc.exe",
+      "hash": "d76f0b22bb5769714e84e48937e8aac59703575c2e4c1f914cb7d6c32c4fbb01"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.6/tspc-aarch64-pc-windows-msvc.exe#/tspc.exe",
+      "hash": "f1a143b8d3d37e397600518e7674a3cc89deedd3356d8f35e2d3d4d10b61d65d"
+    }
+  },
+  "bin": "tspc.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/typespec-rs"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/typespec-rs/releases/download/v$version/tspc-x86_64-pc-windows-msvc.exe#/tspc.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/typespec-rs/releases/download/v$version/tspc-aarch64-pc-windows-msvc.exe#/tspc.exe"
+      }
+    }
+  }
+}

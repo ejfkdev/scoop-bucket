@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.1.2",
+  "description": "Dart AOT snapshot debug-info exporter",
+  "homepage": "https://github.com/ejfkdev/dae",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.2/dae-Windows-x64.exe#/dae.exe",
+      "hash": "4c8f9e47a350c86c14b9efeb94da6be0e9535c5e5f7e5881468f83e25178eb1c"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.2/dae-Windows-arm64.exe#/dae.exe",
+      "hash": "db051b95cac8019ffa8972e468539e20a6ab364dbd9cbf7f950134922d0bfac9"
+    }
+  },
+  "bin": "dae.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/dae"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/dae/releases/download/v$version/dae-Windows-x64.exe#/dae.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/dae/releases/download/v$version/dae-Windows-arm64.exe#/dae.exe"
+      }
+    }
+  }
+}

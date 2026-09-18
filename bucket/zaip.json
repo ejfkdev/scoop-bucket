@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "1.1.0",
+  "description": "WebSocket tunnel proxy (client and server)",
+  "homepage": "https://github.com/ejfkdev/zaip",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": [
+        "https://github.com/ejfkdev/zaip/releases/download/v1.1.0/zaip-client_windows_amd64.exe#/zaip-client.exe",
+        "https://github.com/ejfkdev/zaip/releases/download/v1.1.0/zaip-server_windows_amd64.exe#/zaip-server.exe"
+      ],
+      "hash": [
+        "f7f696fd74a0d807690806b27073a3cb8c65be69c77d948f033b8dfb60403c77",
+        "64520e3b64e6b2631b5121bdcfaf467e47cc43c59a47b92a80e5e3b96af79272"
+      ]
+    },
+    "arm64": {
+      "url": [
+        "https://github.com/ejfkdev/zaip/releases/download/v1.1.0/zaip-client_windows_arm64.exe#/zaip-client.exe",
+        "https://github.com/ejfkdev/zaip/releases/download/v1.1.0/zaip-server_windows_arm64.exe#/zaip-server.exe"
+      ],
+      "hash": [
+        "fed3091320a4ad42dbce125fea23433dcdfe8bcdd9e48dad38624648a5c0f9e1",
+        "f1875f4433fc72d1556ba6310a483a37542155ee710a1f0a798eddc56341df78"
+      ]
+    }
+  },
+  "bin": ["zaip-client.exe", "zaip-server.exe"],
+  "checkver": {
+    "github": "https://github.com/ejfkdev/zaip"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": [
+          "https://github.com/ejfkdev/zaip/releases/download/v$version/zaip-client_windows_amd64.exe#/zaip-client.exe",
+          "https://github.com/ejfkdev/zaip/releases/download/v$version/zaip-server_windows_amd64.exe#/zaip-server.exe"
+        ]
+      },
+      "arm64": {
+        "url": [
+          "https://github.com/ejfkdev/zaip/releases/download/v$version/zaip-client_windows_arm64.exe#/zaip-client.exe",
+          "https://github.com/ejfkdev/zaip/releases/download/v$version/zaip-server_windows_arm64.exe#/zaip-server.exe"
+        ]
+      }
+    }
+  }
+}

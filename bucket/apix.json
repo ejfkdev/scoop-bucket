@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.0.2",
+  "description": "AI-friendly HTTP request minimization tool",
+  "homepage": "https://github.com/ejfkdev/apix",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/apix/releases/download/v0.0.2/apix-windows-amd64.zip",
+      "hash": "4313637461716ee0c489c2357e1f90a87d03db9366f8f62d1621ae20181714bd"
+    },
+    "32bit": {
+      "url": "https://github.com/ejfkdev/apix/releases/download/v0.0.2/apix-windows-386.zip",
+      "hash": "390ed9ac7c9c749a6956380d2c13533efe664796019ebfa440506db6081c1a4e"
+    }
+  },
+  "pre_install": [
+    "Remove-Item \"$dir\\README.md\", \"$dir\\LICENSE\" -ErrorAction SilentlyContinue",
+    "Get-ChildItem \"$dir\\apix-windows-*.exe\" | Select-Object -First 1 | Rename-Item -NewName 'apix.exe'"
+  ],
+  "bin": "apix.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/apix"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/apix/releases/download/v$version/apix-windows-amd64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/ejfkdev/apix/releases/download/v$version/apix-windows-386.zip"
+      }
+    }
+  }
+}

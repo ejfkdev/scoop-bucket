@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.1.0",
+  "description": "VCC CLI tool",
+  "homepage": "https://github.com/ejfkdev/vcc-cli",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/vcc-cli/releases/download/v0.1.0/vcc-x86_64-windows.exe",
+      "hash": "e03ba1208d4dab493d6d2b4dffd76135e52f49aaaccef263beceb7ba6f111629"
+    }
+  },
+  "bin": [["vcc-x86_64-windows.exe", "vcc"]],
+  "checkver": {
+    "github": "https://github.com/ejfkdev/vcc-cli"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/vcc-cli/releases/download/v$version/vcc-x86_64-windows.exe"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.6.2",
+  "description": "Dynamic JS File Extractor - detects dynamically loaded JavaScript files by statically analyzing website HTML and JS code",
+  "homepage": "https://github.com/ejfkdev/dj",
+  "license": "MPL-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/dj/releases/download/v0.6.2/dj-windows-amd64.exe#/dj.exe",
+      "hash": "189d79dfb4a08cefecc02695a02a6e07058ddf6badef589fa2066c8191bf239f"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/dj/releases/download/v0.6.2/dj-windows-arm64.exe#/dj.exe",
+      "hash": "40ae0f023fb655e07d86ce6645ecc05de50dd2ec376d09a2ad7cb1a52515ae31"
+    }
+  },
+  "bin": "dj.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/dj"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/dj/releases/download/v$version/dj-windows-amd64.exe#/dj.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/dj/releases/download/v$version/dj-windows-arm64.exe#/dj.exe"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.3.0",
+  "description": "Multi-server DNS query tool (concurrent, all record types, DoT/DoH/DoQ/HTTPDNS)",
+  "homepage": "https://github.com/ejfkdev/dns",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/dns/releases/download/v0.3.0/dns-0.3.0-x86_64-pc-windows-msvc.exe#/dns.exe",
+      "hash": "a12d6b506d0eba15dfc5784b63c43dbebca353c3bb729c24480ac1e006eb9ab3"
+    }
+  },
+  "bin": "dns.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/dns"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/dns/releases/download/v$version/dns-$version-x86_64-pc-windows-msvc.exe#/dns.exe"
+      }
+    }
+  }
+}

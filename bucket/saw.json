@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.2.0",
+  "description": "Terminal sessions that stay alive - reconnect from any device and resume exactly where you left off (client, server and shell)",
+  "homepage": "https://github.com/ejfkdev/ShellAnyWhere",
+  "license": "MPL-2.0",
+  "architecture": {
+    "64bit": {
+      "url": [
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-client-windows-x86_64.exe#/saw-client.exe",
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-server-windows-x86_64.exe#/saw-server.exe",
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-shell-windows-x86_64.exe#/saw-shell.exe"
+      ],
+      "hash": [
+        "bff46241e1cf12de9bda0e82c9668e7e4f00d2f0eccbbdf3ed2d4a975797858e",
+        "9a18022de3ed28b089989fe35cb5e63b37845c79657350ca0f8ec19fbc022ba3",
+        "403d25e9bd1a2f339712127a734b33b8fa14bc2d0339de5480b3d3a69cc92312"
+      ]
+    },
+    "arm64": {
+      "url": [
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-client-windows-arm64.exe#/saw-client.exe",
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-server-windows-arm64.exe#/saw-server.exe",
+        "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v0.2.0/saw-shell-windows-arm64.exe#/saw-shell.exe"
+      ],
+      "hash": [
+        "98716881bbc377fb0377b793ee07e3078e371a19366541025cafb698968a69d3",
+        "25ed1ad702fd5e8d35e6525fd862fda0c184c53de4e4fe3315c8377dd334b500",
+        "3e76981a15b28f9dfc0dc1192213d617930ac65bf1c99c63eac12a7b0bdf6c60"
+      ]
+    }
+  },
+  "bin": ["saw-client.exe", "saw-server.exe", "saw-shell.exe"],
+  "checkver": {
+    "github": "https://github.com/ejfkdev/ShellAnyWhere"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": [
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-client-windows-x86_64.exe#/saw-client.exe",
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-server-windows-x86_64.exe#/saw-server.exe",
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-shell-windows-x86_64.exe#/saw-shell.exe"
+        ]
+      },
+      "arm64": {
+        "url": [
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-client-windows-arm64.exe#/saw-client.exe",
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-server-windows-arm64.exe#/saw-server.exe",
+          "https://github.com/ejfkdev/ShellAnyWhere/releases/download/v$version/saw-shell-windows-arm64.exe#/saw-shell.exe"
+        ]
+      }
+    }
+  }
+}

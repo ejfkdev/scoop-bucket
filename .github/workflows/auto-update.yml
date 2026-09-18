@@ -1,0 +1,56 @@
+name: Auto-update manifests
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily at 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update manifests
+        run: python3 update_manifests.py
+
+      - name: Validate manifests
+        run: python3 validate_manifests.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet bucket/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "auto-update manifests"
+          title: "auto-update manifests"
+          branch: auto-update/manifests
+          delete-branch: true
+
+      - name: Merge pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for i in $(seq 1 12); do
+            if gh pr merge auto-update/manifests --squash --admin --delete-branch; then
+              echo "Merged"
+              exit 0
+            fi
+            echo "Merge attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
+          echo "ERROR: failed to merge after 12 attempts" >&2
+          exit 1
