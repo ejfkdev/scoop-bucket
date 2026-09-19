@@ -103,8 +103,8 @@ ASSETS = {
         "arm64": "avdroot_windows_arm64.exe#/avdroot.exe",
     },
     "ddc": {
-        "64bit": "ddc-v{version}-windows-amd64.exe#/ddc.exe",
-        "arm64": "ddc-v{version}-windows-arm64.exe#/ddc.exe",
+        "64bit": "ddc-v{version}-x86_64-pc-windows-msvc.exe#/ddc.exe",
+        "arm64": "ddc-v{version}-aarch64-pc-windows-msvc.exe#/ddc.exe",
     },
 }
 
