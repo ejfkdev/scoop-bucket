@@ -7,29 +7,29 @@ counterpart to [ejfkdev/homebrew-tap](https://github.com/ejfkdev/homebrew-tap).
 
 ## Usage
 
-```powershell
-# Install a tool directly
-scoop install ejfkdev/scoop-bucket/dj
-scoop install ejfkdev/scoop-bucket/udf
-scoop install ejfkdev/scoop-bucket/apix
-scoop install ejfkdev/scoop-bucket/tspc
-scoop install ejfkdev/scoop-bucket/vcc
-scoop install ejfkdev/scoop-bucket/zaip
-scoop install ejfkdev/scoop-bucket/saw
-scoop install ejfkdev/scoop-bucket/dns
-scoop install ejfkdev/scoop-bucket/oss
-scoop install ejfkdev/scoop-bucket/jd
-scoop install ejfkdev/scoop-bucket/dae
-scoop install ejfkdev/scoop-bucket/ov
-scoop install ejfkdev/scoop-bucket/jcdc
-scoop install ejfkdev/scoop-bucket/pycdc
-scoop install ejfkdev/scoop-bucket/avdroot
-scoop install ejfkdev/scoop-bucket/ddc
+Scoop needs to know where a manifest lives before it can install it. Add the
+bucket once (recommended), then install by name:
 
-# Or add the bucket first, then install by name
+```powershell
 scoop bucket add ejfkdev https://github.com/ejfkdev/scoop-bucket
-scoop install dj
+scoop install ddc
 ```
+
+Or install straight from a manifest URL without adding the bucket — the app
+name is taken from the file name, so this gives you `ddc`:
+
+```powershell
+scoop install https://raw.githubusercontent.com/ejfkdev/scoop-bucket/main/bucket/ddc.json
+```
+
+Both forms work for every tool; replace `ddc` with any name from the table
+below.
+
+> **Note:** `scoop install ejfkdev/scoop-bucket/ddc` does **not** work. Scoop's
+> `bucket/app` syntax resolves `bucket` against buckets you have already added
+> locally, not against a `owner/repo` path — so until you run `scoop bucket add`,
+> Scoop reports `Couldn't find manifest for 'ddc'`. This differs from Homebrew,
+> where `brew install ejfkdev/tap/dj` taps the repo implicitly.
 
 ## Available Manifests
 

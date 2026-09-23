@@ -7,29 +7,27 @@
 
 ## 使用方法
 
-```powershell
-# 直接安装
-scoop install ejfkdev/scoop-bucket/dj
-scoop install ejfkdev/scoop-bucket/udf
-scoop install ejfkdev/scoop-bucket/apix
-scoop install ejfkdev/scoop-bucket/tspc
-scoop install ejfkdev/scoop-bucket/vcc
-scoop install ejfkdev/scoop-bucket/zaip
-scoop install ejfkdev/scoop-bucket/saw
-scoop install ejfkdev/scoop-bucket/dns
-scoop install ejfkdev/scoop-bucket/oss
-scoop install ejfkdev/scoop-bucket/jd
-scoop install ejfkdev/scoop-bucket/dae
-scoop install ejfkdev/scoop-bucket/ov
-scoop install ejfkdev/scoop-bucket/jcdc
-scoop install ejfkdev/scoop-bucket/pycdc
-scoop install ejfkdev/scoop-bucket/avdroot
-scoop install ejfkdev/scoop-bucket/ddc
+Scoop 需要先知道 manifest 的位置才能安装。推荐先添加 bucket，之后按名称安装：
 
-# 或者先添加 bucket，再按名称安装
+```powershell
 scoop bucket add ejfkdev https://github.com/ejfkdev/scoop-bucket
-scoop install dj
+scoop install ddc
 ```
+
+也可以直接通过 manifest 的 URL 安装，无需先添加 bucket。应用名取自文件名，
+因此下面这条命令安装的就是 `ddc`：
+
+```powershell
+scoop install https://raw.githubusercontent.com/ejfkdev/scoop-bucket/main/bucket/ddc.json
+```
+
+两种方式对下表中的所有工具都适用，把 `ddc` 换成任意名称即可。
+
+> **注意：** `scoop install ejfkdev/scoop-bucket/ddc` **无法使用**。Scoop 的
+> `bucket/app` 语法中的 `bucket` 指的是**本地已添加的 bucket 名称**，而不是
+> `owner/repo` 路径，所以在执行 `scoop bucket add` 之前，Scoop 会报
+> `Couldn't find manifest for 'ddc'`。这一点与 Homebrew 不同——`brew install
+> ejfkdev/tap/dj` 会自动 tap 该仓库。
 
 ## 可用软件包
 
