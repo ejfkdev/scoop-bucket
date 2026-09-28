@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Dart AOT snapshot export for reverse engineering (IDA / radare2 / Frida) with a pseudocode decompiler",
   "homepage": "https://github.com/ejfkdev/dae",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.8/dae-Windows-x64.exe#/dae.exe",
-      "hash": "671a4e2c16ab88815f891b435fa8f264d6b6c98fb764e0a63b4b47569e17df01"
+      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.9/dae-Windows-x64.exe#/dae.exe",
+      "hash": "7f21f928f815c194b3210a02967db7263f01c7da595f89b2f0011f1a5e6ad2cb"
     },
     "arm64": {
-      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.8/dae-Windows-arm64.exe#/dae.exe",
-      "hash": "b5cb655a139bb0388b25f0e5b13c317ceeefdbe1c36ab71bb89d89178af6ef31"
+      "url": "https://github.com/ejfkdev/dae/releases/download/v0.1.9/dae-Windows-arm64.exe#/dae.exe",
+      "hash": "cf71b49081323dfe00f3d3060ae36d57768e39ab2255f0bae01526395f787b65"
     }
   },
   "bin": "dae.exe",
