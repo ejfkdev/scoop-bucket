@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "DEX to Java decompiler",
   "homepage": "https://github.com/ejfkdev/ddc",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ejfkdev/ddc/releases/download/v0.1.19/ddc-v0.1.19-x86_64-pc-windows-msvc.exe#/ddc.exe",
-      "hash": "e5bd54a75c09e33c6de6b35b66043eaa0fa24051d0d72b0e2cbe93a8484227e5"
+      "url": "https://github.com/ejfkdev/ddc/releases/download/v0.1.20/ddc-v0.1.20-x86_64-pc-windows-msvc.exe#/ddc.exe",
+      "hash": "9a67b4607c3a0bc2a098043aa55a34b6c1201965b8d0bde993ac831a0bc35392"
     },
     "arm64": {
-      "url": "https://github.com/ejfkdev/ddc/releases/download/v0.1.19/ddc-v0.1.19-aarch64-pc-windows-msvc.exe#/ddc.exe",
-      "hash": "6b520becb6e9aa4beea26658d39b528b0908bdc94eee520caf837495920b9515"
+      "url": "https://github.com/ejfkdev/ddc/releases/download/v0.1.20/ddc-v0.1.20-aarch64-pc-windows-msvc.exe#/ddc.exe",
+      "hash": "5922188df2abbe587f3294b16e7212df7784ff97ab87f6c2bbfad8562aa6fc8f"
     }
   },
   "bin": "ddc.exe",
