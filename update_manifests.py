@@ -88,6 +88,10 @@ ASSETS = {
         "64bit": "jcdc-v{version}-windows-amd64.exe#/jcdc.exe",
         "arm64": "jcdc-v{version}-windows-arm64.exe#/jcdc.exe",
     },
+    "jscd": {
+        "64bit": "jscd-v{version}-windows-amd64.exe#/jscd.exe",
+        "arm64": "jscd-v{version}-windows-arm64.exe#/jscd.exe",
+    },
     "pycdc": {
         "64bit": [
             "pycdc-x86_64-windows.exe#/pycdc.exe",
@@ -116,7 +120,7 @@ PRE_INSTALL_RENAME = {"oss"}
 def _headers():
     """Build request headers, authenticating when a token is available.
 
-    Unauthenticated GitHub API calls are capped at 60/hour, which a 16-tool
+    Unauthenticated GitHub API calls are capped at 60/hour, which a 17-tool
     sweep can exhaust; CI supplies GITHUB_TOKEN, and a local run can export
     GH_TOKEN (or rely on the ``gh`` CLI's stored token).
     """

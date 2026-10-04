@@ -46,6 +46,7 @@ scoop install https://raw.githubusercontent.com/ejfkdev/scoop-bucket/main/bucket
 | [dae](https://github.com/ejfkdev/dae) | 0.1.2 | `dae` | Dart AOT 快照调试信息导出工具 |
 | [ov](https://github.com/ejfkdev/ov) | 0.1.1 | `ov` | 下载链接版本探测工具 |
 | [jcdc](https://github.com/ejfkdev/jcdc) | 0.1.2 | `jcdc` | Java class 文件反编译器 |
+| [jscd](https://github.com/ejfkdev/jscd) | 0.1.0 | `jscd` | 将 bytenode 编译的 `.jsc`（V8 code cache）还原为 JavaScript |
 | [pycdc](https://github.com/ejfkdev/pycdc) | 0.6.0 | `pycdc`、`pycdas` | Python 字节码反编译与反汇编工具 |
 | [avdroot](https://github.com/ejfkdev/avdroot) | 0.1.1 | `avdroot` | 通过 Magisk 补丁 ramdisk 获取 Android 模拟器 root |
 | [ddc](https://github.com/ejfkdev/ddc) | 0.1.0 | `ddc` | DEX 转 Java 反编译器 |
