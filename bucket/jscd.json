@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "0.1.0",
+  "description": "Reverse bytenode-compiled .jsc (V8 code cache) back to JavaScript",
+  "homepage": "https://github.com/ejfkdev/jscd",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ejfkdev/jscd/releases/download/v0.1.0/jscd-v0.1.0-windows-amd64.exe#/jscd.exe",
+      "hash": "ac6530e7ae22ddd37bcbaf6069e40b26cd3d05ce072c6bcaa37a6eed60f66300"
+    },
+    "arm64": {
+      "url": "https://github.com/ejfkdev/jscd/releases/download/v0.1.0/jscd-v0.1.0-windows-arm64.exe#/jscd.exe",
+      "hash": "e52c801b854b840f5587682df50a83c48b7b957e3c2786d2d380916105eb774b"
+    }
+  },
+  "bin": "jscd.exe",
+  "checkver": {
+    "github": "https://github.com/ejfkdev/jscd"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ejfkdev/jscd/releases/download/v$version/jscd-v$version-windows-amd64.exe#/jscd.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/ejfkdev/jscd/releases/download/v$version/jscd-v$version-windows-arm64.exe#/jscd.exe"
+      }
+    }
+  }
+}

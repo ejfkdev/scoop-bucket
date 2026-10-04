@@ -48,6 +48,7 @@ below.
 | [dae](https://github.com/ejfkdev/dae) | 0.1.2 | `dae` | Dart AOT snapshot debug-info exporter |
 | [ov](https://github.com/ejfkdev/ov) | 0.1.1 | `ov` | Download URL version prober |
 | [jcdc](https://github.com/ejfkdev/jcdc) | 0.1.2 | `jcdc` | Java class file decompiler |
+| [jscd](https://github.com/ejfkdev/jscd) | 0.1.0 | `jscd` | Reverse bytenode-compiled `.jsc` (V8 code cache) back to JavaScript |
 | [pycdc](https://github.com/ejfkdev/pycdc) | 0.6.0 | `pycdc`, `pycdas` | Python bytecode decompiler and disassembler |
 | [avdroot](https://github.com/ejfkdev/avdroot) | 0.1.1 | `avdroot` | Root an Android Studio emulator via Magisk-patched ramdisk |
 | [ddc](https://github.com/ejfkdev/ddc) | 0.1.0 | `ddc` | DEX to Java decompiler |
