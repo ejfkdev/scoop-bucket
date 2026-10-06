@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Download URL version prober - auto-detect the version in a download link and probe every version combination",
   "homepage": "https://github.com/ejfkdev/ov",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ejfkdev/ov/releases/download/v0.1.2/ov-windows-amd64.exe#/ov.exe",
-      "hash": "4f1eb014f156f883420b521f402ed39ed674d4d8b8a34784f46234c9a87dd9e0"
+      "url": "https://github.com/ejfkdev/ov/releases/download/v0.1.3/ov-windows-amd64.exe#/ov.exe",
+      "hash": "cb73cb439e19c853bd89e40a4f65644bc90be4fdb54f8913b6addaafbf11c362"
     },
     "arm64": {
-      "url": "https://github.com/ejfkdev/ov/releases/download/v0.1.2/ov-windows-arm64.exe#/ov.exe",
-      "hash": "f5874228d8bd9b692d2307897da2919cfd7694661fcec7ce231809674db76ad3"
+      "url": "https://github.com/ejfkdev/ov/releases/download/v0.1.3/ov-windows-arm64.exe#/ov.exe",
+      "hash": "d855ae74a81d0fe080e67bc44fb75a808c4a5be9c48926fc6c363b922622932d"
     }
   },
   "bin": "ov.exe",
