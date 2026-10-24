@@ -1,32 +1,35 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Python bytecode (.pyc/.pyo) decompiler and disassembler supporting Python 2.0-3.15 (CPython, PyPy and others)",
   "homepage": "https://github.com/ejfkdev/pycdc",
   "license": "MIT",
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.6.0/pycdc-x86_64-windows.exe#/pycdc.exe",
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.6.0/pycdas-x86_64-windows.exe#/pycdas.exe"
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.7.0/pycdc-x86_64-windows.exe#/pycdc.exe",
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.7.0/pycdas-x86_64-windows.exe#/pycdas.exe"
       ],
       "hash": [
-        "8ec2402f64e43de996b55f61fcaf122527be34e5df79372fa5b540abbc245adb",
-        "e3d1c799f3c5a5849f2b5291b25cca89aef2cbffe663e7f535b5d27bde0cd239"
+        "161c105df901ded02d2d7338d80f0ab0bde6c6fe10a858f6bcbf98ea6025cf08",
+        "d535e5312c9d6cdaa239af3d94bc871649e8aae996847f672676673f86a8a6e0"
       ]
     },
     "arm64": {
       "url": [
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.6.0/pycdc-aarch64-windows.exe#/pycdc.exe",
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.6.0/pycdas-aarch64-windows.exe#/pycdas.exe"
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.7.0/pycdc-aarch64-windows.exe#/pycdc.exe",
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.7.0/pycdas-aarch64-windows.exe#/pycdas.exe"
       ],
       "hash": [
-        "02b3a366956a2eadf66436ae13378ab8edafb076ad145c2b12d31c9e5c91ca46",
-        "211bde039665a51af5e67689d07e72a7a0bd0fd305d204b947679b443ea1e77c"
+        "7da2ab8893182949a1e391de8c1481f4dac5dae0e42b6b209b66e169e4ec7bd5",
+        "85a5bd53e265023d1e6d7956e60b1a4ad5d694fd8e3a59b005d1140fb89bf403"
       ]
     }
   },
-  "bin": ["pycdc.exe", "pycdas.exe"],
+  "bin": [
+    "pycdc.exe",
+    "pycdas.exe"
+  ],
   "checkver": {
     "github": "https://github.com/ejfkdev/pycdc"
   },
