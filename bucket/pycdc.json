@@ -1,28 +1,28 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Python bytecode (.pyc/.pyo) decompiler and disassembler supporting Python 2.0-3.15 (CPython, PyPy and others)",
   "homepage": "https://github.com/ejfkdev/pycdc",
   "license": "MIT",
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.1/pycdc-x86_64-windows.exe#/pycdc.exe",
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.1/pycdas-x86_64-windows.exe#/pycdas.exe"
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-x86_64-windows.exe#/pycdc.exe",
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-x86_64-windows.exe#/pycdas.exe"
       ],
       "hash": [
-        "673375d5c4fabb0efc0e435588b62ce3d6eedeb0bb29ed294bb6aaf881ecefa3",
-        "03cc4ea6541f5f83de63a5fef685d767f7284f89c377ed1ef03335ac521c989b"
+        "75cd88161a00b9a46a9a06ac1f7c9965d90d2df1f0f28c7d084a67799501fbdc",
+        "41eab99c458dd78b0e581fa197a6e39d699338acd3c11d10e0a08670bec923ba"
       ]
     },
     "arm64": {
       "url": [
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.1/pycdc-aarch64-windows.exe#/pycdc.exe",
-        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.1/pycdas-aarch64-windows.exe#/pycdas.exe"
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-aarch64-windows.exe#/pycdc.exe",
+        "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-aarch64-windows.exe#/pycdas.exe"
       ],
       "hash": [
-        "6b1e38ac940b0380c0e83709a1dfc7fa97e154c10fe8a0c5198b1a973b760bc2",
-        "69fa1aec4f71505159bcdb7870fb54b89fe8cd3e12aadd6bacd4872457146f35"
+        "f16fdb7eba59ed0817d6b1935d66537a435bbe55a07c5aca9838dcd00f4eb924",
+        "0fe56f0df6fe9a6557bbd008d5f044a2aaf348b1486f155501a59344381d6c24"
       ]
     }
   },
