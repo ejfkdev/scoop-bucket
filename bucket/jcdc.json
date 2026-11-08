@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Java class file decompiler supporting Java 1.1-26 (class version 45-70)",
   "homepage": "https://github.com/ejfkdev/jcdc",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-windows-amd64.exe#/jcdc.exe",
-      "hash": "3d248f52e945bac4661b95de91be30a61b1da0380edf7c9b4bbee0f222555ad7"
+      "url": "https://github.com/ejfkdev/jcdc/releases/download/v0.1.5/jcdc-v0.1.5-windows-amd64.exe#/jcdc.exe",
+      "hash": "7d1cf659bd9297e25ce7aaa14c1390e4ecd34d8fcedbbe372a9925b16dcf1ffd"
     },
     "arm64": {
-      "url": "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-windows-arm64.exe#/jcdc.exe",
-      "hash": "84887ee3d1608b9b54c08bef411a2bcf6c8655e27b7c72dd67fbba5394f948d5"
+      "url": "https://github.com/ejfkdev/jcdc/releases/download/v0.1.5/jcdc-v0.1.5-windows-arm64.exe#/jcdc.exe",
+      "hash": "ff4f4a273d3f7729862eae0109c9aeb38419345eaf24144237424d0fb16d404f"
     }
   },
   "bin": "jcdc.exe",
