@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Extract files from disk images, container archives, and filesystems",
   "homepage": "https://github.com/ejfkdev/udf",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_windows_amd64.zip",
-      "hash": "48fd0274a054c2eb810237b1e3a2f335434fde6176605a891fb5507ba8a5c77b"
+      "url": "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_windows_amd64.zip",
+      "hash": "47a54e96e166b95e4195de53b083e41137782ed5f8528345059d990918c2bd9c"
     },
     "arm64": {
-      "url": "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_windows_arm64.zip",
-      "hash": "b174a5e2b0bf3541ffbe8cb8e9db030b840db2a1f0c8a6a3c717b784edd4136b"
+      "url": "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_windows_arm64.zip",
+      "hash": "a39aa4b55ec764785d09a3d34a551bbd9c01924aefde37a22b496887958bfc3a"
     }
   },
   "pre_install": "Remove-Item \"$dir\\README.md\", \"$dir\\README.zh-CN.md\", \"$dir\\LICENSE\" -ErrorAction SilentlyContinue",
